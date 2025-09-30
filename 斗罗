@@ -16,4 +16,3 @@ def 生成图(item: Item):
     body = {"text_prompts": [{"text": prompt}], "cfg_scale": 7, "height": 1024, "width": 1024, "samples": 1, "steps": 30}
     resp = requests.post(SD_URL, json=body, headers={"Accept": "image/png"})
     return Response(content=resp.content, media_type="image/png")
-
